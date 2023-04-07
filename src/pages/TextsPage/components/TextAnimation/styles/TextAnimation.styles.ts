@@ -246,7 +246,7 @@ export const FlashColorsAnimation = styled(Animation)`
   color: transparent;
 `;
 
-const lineTroughAnimation = keyframes`
+const lineThroughAnimation = keyframes`
     0% {
       text-decoration: underline;
     }
@@ -259,9 +259,9 @@ const lineTroughAnimation = keyframes`
 `;
 
 export const LineThroughAnimation = styled(Animation)`
-  animation-name: ${lineTroughAnimation};
+  animation-name: ${lineThroughAnimation};
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  /* animation: ${lineTroughAnimation} 1s ease-in-out infinite; */
+  /* animation: ${lineThroughAnimation} 1s ease-in-out infinite; */
 `;
