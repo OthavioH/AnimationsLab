@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
+        height: fit-content;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
