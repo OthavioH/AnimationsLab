@@ -147,7 +147,7 @@ export const TextWrapper = styled.div`
   border-right: 0.15em solid transparent; // set the cursor effect
   height: fit-content; // height needs to be the same of the text
   margin: 0 auto; // center the text
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 `;
 
 export const TypingAnimation = styled(Animation)`
@@ -161,4 +161,20 @@ export const TypingAnimation = styled(Animation)`
     /* animation: ${typingAnimation} 3.5s steps(20, end),
       ${blinkAnimation} 0.75s step-end infinite; */
   }
+`;
+
+const textShadowPulseAnimation = keyframes`
+    0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.6);  
+  }
+`;
+
+export const TextShadowAnimation = styled(Animation)`
+  animation: ${textShadowPulseAnimation} 2s ease-in-out infinite;
 `;

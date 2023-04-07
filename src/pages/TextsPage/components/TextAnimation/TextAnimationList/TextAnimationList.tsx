@@ -1,9 +1,9 @@
-import styled from "styled-components";
 import {
   AnimationList,
   FadeAnimation,
   SlideAnimation,
   TextAnimationItem,
+  TextShadowAnimation,
   TextWrapper,
   TypingAnimation,
 } from "../styles/TextAnimation.styles";
@@ -25,6 +25,9 @@ export default function TextAnimationList({ text }: TextAnimationListProps) {
         <TypingAnimation>
           <TextWrapper>{text}</TextWrapper>
         </TypingAnimation>
+      </TextAnimationItem>
+      <TextAnimationItem>
+        <TextShadowAnimation>{text}</TextShadowAnimation>
       </TextAnimationItem>
     </AnimationList>
   );
