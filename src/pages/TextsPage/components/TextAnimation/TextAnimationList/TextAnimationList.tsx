@@ -3,6 +3,7 @@ import {
   ChangeColorAnimation,
   FadeAnimation,
   FlashColorsAnimation,
+  LineTroughAnimation,
   SlideAnimation,
   TextAnimationItem,
   TextShadowAnimation,
@@ -36,6 +37,9 @@ export default function TextAnimationList({ text }: TextAnimationListProps) {
       </TextAnimationItem>
       <TextAnimationItem>
         <FlashColorsAnimation>The flash</FlashColorsAnimation>
+      </TextAnimationItem>
+      <TextAnimationItem>
+        <LineTroughAnimation>{text}</LineTroughAnimation>
       </TextAnimationItem>
     </AnimationList>
   );

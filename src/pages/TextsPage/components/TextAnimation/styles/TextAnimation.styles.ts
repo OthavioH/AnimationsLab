@@ -245,3 +245,23 @@ export const FlashColorsAnimation = styled(Animation)`
   background-clip: text;
   color: transparent;
 `;
+
+const lineTroughAnimation = keyframes`
+    0% {
+      text-decoration: underline;
+    }
+    50%{
+      text-decoration: line-through;
+    }
+    100% {
+      text-decoration: overline;
+    }
+`;
+
+export const LineTroughAnimation = styled(Animation)`
+  animation-name: ${lineTroughAnimation};
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  /* animation: ${lineTroughAnimation} 1s ease-in-out infinite; */
+`;
