@@ -12,6 +12,8 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
+        min-height: 100vh;
+        height: fit-content;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
