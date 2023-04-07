@@ -9,7 +9,7 @@ export const NavMain = styled.nav`
   height: 60px;
   background-color: #fff;
 
-  box-shadow: 0px -1px 8px black;
+  box-shadow: 0px -1px 8px #000;
 
   z-index: 999;
 `;
