@@ -1,23 +1,5 @@
 import styled, { keyframes } from "styled-components";
 
-const fadeIn = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`;
-
-const fadeOut = keyframes`
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-`;
-
 const noShadowAnimation = keyframes`
     0% {
         box-shadow: 0px 2px 4px 0.5px rgba(0, 0, 0, 0.5);
@@ -69,6 +51,24 @@ export const AnimationList = styled.div`
   gap: 10px;
 `;
 
+const fadeIn = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`;
+
+const fadeOut = keyframes`
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+`;
+
 export const FadeAnimation = styled.div`
   display: flex;
   align-items: center;
@@ -87,5 +87,45 @@ export const FadeAnimation = styled.div`
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     /* animation: ${fadeOut} 1.5s ease-in-out; */
+  }
+`;
+
+const slideInAnimation = keyframes`
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+`;
+
+const slideOutAnimation = keyframes`
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+`;
+
+export const SlideAnimation = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  animation-name: ${slideInAnimation};
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  /* animation: ${slideInAnimation} 1.5s ease-in-out; */
+
+  :hover {
+    animation-name: ${slideOutAnimation};
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    /* animation: ${slideOutAnimation} 1.5s ease-in-out; */
   }
 `;

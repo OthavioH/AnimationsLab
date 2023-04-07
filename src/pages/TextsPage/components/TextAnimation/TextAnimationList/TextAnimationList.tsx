@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {
   AnimationList,
   FadeAnimation,
+  SlideAnimation,
   TextAnimationItem,
 } from "../styles/TextAnimation.styles";
 
@@ -16,7 +17,7 @@ export default function TextAnimationList({ text }: TextAnimationListProps) {
         <FadeAnimation>{text}</FadeAnimation>
       </TextAnimationItem>
       <TextAnimationItem>
-        <p>{text}</p>
+        <SlideAnimation>{text}</SlideAnimation>
       </TextAnimationItem>
     </AnimationList>
   );
