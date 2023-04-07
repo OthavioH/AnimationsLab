@@ -118,7 +118,7 @@ export const SlideAnimation = styled(Animation)`
 
   :hover {
     animation-name: ${slideOutAnimation};
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     /* animation: ${slideOutAnimation} 1.5s ease-in-out; */
@@ -176,5 +176,9 @@ const textShadowPulseAnimation = keyframes`
 `;
 
 export const TextShadowAnimation = styled(Animation)`
-  animation: ${textShadowPulseAnimation} 2s ease-in-out infinite;
+  animation-name: ${textShadowPulseAnimation};
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  /* animation: ${textShadowPulseAnimation} 2s ease-in-out infinite; */
 `;
