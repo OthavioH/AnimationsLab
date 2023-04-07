@@ -4,6 +4,8 @@ import {
   FadeAnimation,
   SlideAnimation,
   TextAnimationItem,
+  TextWrapper,
+  TypingAnimation,
 } from "../styles/TextAnimation.styles";
 
 interface TextAnimationListProps {
@@ -18,6 +20,11 @@ export default function TextAnimationList({ text }: TextAnimationListProps) {
       </TextAnimationItem>
       <TextAnimationItem>
         <SlideAnimation>{text}</SlideAnimation>
+      </TextAnimationItem>
+      <TextAnimationItem>
+        <TypingAnimation>
+          <TextWrapper>{text}</TextWrapper>
+        </TypingAnimation>
       </TextAnimationItem>
     </AnimationList>
   );
