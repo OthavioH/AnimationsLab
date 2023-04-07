@@ -4,7 +4,7 @@ import TextInput from "../../components/form/TextInput/TextInput";
 import TextAnimationList from "./components/TextAnimation/TextAnimationList/TextAnimationList";
 
 export default function TextsPage() {
-  const [text, setText] = useState<string>("Text");
+  const [text, setText] = useState<string>("Cool animations");
 
   return (
     <TextPageMain>
