@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
-import Nav from "./components/Navigation/Nav/Nav";
+import Nav from "./components/navigation/Nav/Nav";
 import Router from "./routes/router";
 import { GlobalStyles } from "./styles/global.styles";
 
