@@ -6,7 +6,8 @@ Below you can find a list of animations that are implemented on the project.
 ## Text animations
 - Fade-in animation.
 - Slide-in animation.
-<!-- - Typing animation.
+- Typing animation.
+<!--
 - Text shadow animation.
 - Color change animation.
 - Line-through animation.
