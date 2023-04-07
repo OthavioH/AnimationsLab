@@ -9,7 +9,7 @@ Below you can find a list of animations that are implemented on the project.
 - Typing animation.
 - Text shadow animation.
 - Color change animation.
-<!-- - Line-through animation. -->
+- Line-through animation.
 <!-- - Text rotation animation. -->
 
 ## Button animations (Not implemented yet)
