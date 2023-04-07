@@ -168,7 +168,7 @@ const textShadowPulseAnimation = keyframes`
     text-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
   }
   50% {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
   }
   100% {
     text-shadow: 0 0 0 rgba(0, 0, 0, 0.6);  
@@ -181,4 +181,67 @@ export const TextShadowAnimation = styled(Animation)`
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   /* animation: ${textShadowPulseAnimation} 2s ease-in-out infinite; */
+`;
+
+const changeColorAnimation = keyframes`
+    0% {
+        background-image: linear-gradient(to right, purple, blue, green, yellow, orange, red);
+    }
+    20% {
+        background-image: linear-gradient(to right, blue, green, yellow, orange, red, purple);
+    }
+    40% {
+        background-image: linear-gradient(to right, green, yellow, orange, red, purple, blue);
+    }
+    60% {
+        background-image: linear-gradient(to right, yellow, orange, red, purple, blue, green); 
+    }
+    80% {
+        background-image: linear-gradient(to right, orange, red, purple, blue, green, yellow);
+    }
+    100% {
+        background-image: linear-gradient(to right, red, purple, blue, green, yellow, orange); 
+    }
+`;
+
+export const ChangeColorAnimation = styled(Animation)`
+  animation-name: ${changeColorAnimation};
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  /* animation: ${changeColorAnimation} 2s ease-in-out infinite; */
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+`;
+
+const flashColorsAnimation = keyframes`
+    0% {
+        background-image: linear-gradient(to right, red, red, orange, #fa9069);
+    }
+    25% {
+        background-image: linear-gradient(to right, red, orange, #fa9069, red); 
+    }
+    50% {
+        background-image: linear-gradient(to right, orange, #fa9069, red, red);
+    }
+    75% {
+        background-image: linear-gradient(to right, #fa9069, red, red, orange);
+    }
+    100% {
+        background-image: linear-gradient(to right, red, red, orange, #fa9069);
+    }
+`;
+
+export const FlashColorsAnimation = styled(Animation)`
+  animation-name: ${flashColorsAnimation};
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  /* animation: ${flashColorsAnimation} 1s ease-in-out infinite; */
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 `;

@@ -1,6 +1,8 @@
 import {
   AnimationList,
+  ChangeColorAnimation,
   FadeAnimation,
+  FlashColorsAnimation,
   SlideAnimation,
   TextAnimationItem,
   TextShadowAnimation,
@@ -28,6 +30,12 @@ export default function TextAnimationList({ text }: TextAnimationListProps) {
       </TextAnimationItem>
       <TextAnimationItem>
         <TextShadowAnimation>{text}</TextShadowAnimation>
+      </TextAnimationItem>
+      <TextAnimationItem>
+        <ChangeColorAnimation>{text}</ChangeColorAnimation>
+      </TextAnimationItem>
+      <TextAnimationItem>
+        <FlashColorsAnimation>The flash</FlashColorsAnimation>
       </TextAnimationItem>
     </AnimationList>
   );
