@@ -258,7 +258,7 @@ const lineTroughAnimation = keyframes`
     }
 `;
 
-export const LineTroughAnimation = styled(Animation)`
+export const LineThroughAnimation = styled(Animation)`
   animation-name: ${lineTroughAnimation};
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
