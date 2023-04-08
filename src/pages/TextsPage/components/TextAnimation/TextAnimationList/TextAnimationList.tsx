@@ -1,6 +1,7 @@
 import {
   AnimationList,
   ChangeColorAnimation,
+  DashedLineThroughAnimation,
   FadeAnimation,
   FlashColorsAnimation,
   LineThroughAnimation,
@@ -40,6 +41,9 @@ export default function TextAnimationList({ text }: TextAnimationListProps) {
       </TextAnimationItem>
       <TextAnimationItem>
         <LineThroughAnimation>{text}</LineThroughAnimation>
+      </TextAnimationItem>
+      <TextAnimationItem>
+        <DashedLineThroughAnimation>{text}</DashedLineThroughAnimation>
       </TextAnimationItem>
     </AnimationList>
   );

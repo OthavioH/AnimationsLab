@@ -10,6 +10,7 @@ const noShadowAnimation = keyframes`
 `;
 
 export const TextAnimationItem = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -264,4 +265,29 @@ export const LineThroughAnimation = styled(Animation)`
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   /* animation: ${lineThroughAnimation} 1s ease-in-out infinite; */
+`;
+
+export const DashedLineThroughAnimation = styled(Animation)`
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 1em;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color: gray; /* Change the text color on hover */
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
 `;
