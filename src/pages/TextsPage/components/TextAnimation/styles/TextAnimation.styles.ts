@@ -52,7 +52,7 @@ export const AnimationList = styled.div`
   gap: 10px;
 `;
 
-const Animation = styled.div`
+export const Animation = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,6 +93,17 @@ export const FadeAnimation = styled(Animation)`
   }
 `;
 
+export const TextWrapper = styled.div`
+  width: fit-content;
+  justify-content: flex-start; // set the text and cursor effect to start
+  max-width: fit-content; // width will grow and finish where the text ends
+  text-align: start; // set the text to start
+  border-right: 0.15em solid transparent; // set the cursor effect
+  height: fit-content; // height needs to be the same of the text
+  margin: 0 auto; // center the text
+  letter-spacing: 2px;
+`;
+
 const slideInAnimation = keyframes`
     0% {
         transform: translateX(-100%);
@@ -107,17 +118,19 @@ const slideOutAnimation = keyframes`
         transform: translateX(0);
     }
     100% {
-        transform: translateX(100%);
+        transform: translateX(300%);
     }
 `;
 
-export const SlideAnimation = styled(Animation)`
+export const SlideAnimationTextWrapper = styled(TextWrapper)`
   animation-name: ${slideInAnimation};
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
   /* animation: ${slideInAnimation} 1.5s ease-in-out; */
+`;
 
-  :hover {
+export const SlideAnimation = styled(Animation)`
+  :hover ${SlideAnimationTextWrapper} {
     animation-name: ${slideOutAnimation};
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
@@ -138,17 +151,6 @@ const typingAnimation = keyframes`
 const blinkAnimation = keyframes`
   from, to {border-color: transparent}
   50% {border-color: #000}
-`;
-
-export const TextWrapper = styled.div`
-  width: fit-content;
-  justify-content: flex-start; // set the text and cursor effect to start
-  max-width: fit-content; // width will grow and finish where the text ends
-  text-align: start; // set the text to start
-  border-right: 0.15em solid transparent; // set the cursor effect
-  height: fit-content; // height needs to be the same of the text
-  margin: 0 auto; // center the text
-  letter-spacing: 2px;
 `;
 
 export const TypingAnimation = styled(Animation)`

@@ -7,6 +7,7 @@ import {
   LineThroughAnimation,
   RotateAnimation,
   SlideAnimation,
+  SlideAnimationTextWrapper,
   TextAnimationItem,
   TextShadowAnimation,
   TextWrapper,
@@ -24,7 +25,9 @@ export default function TextAnimationList({ text }: TextAnimationListProps) {
         <FadeAnimation>{text}</FadeAnimation>
       </TextAnimationItem>
       <TextAnimationItem>
-        <SlideAnimation>{text}</SlideAnimation>
+        <SlideAnimation>
+          <SlideAnimationTextWrapper>{text}</SlideAnimationTextWrapper>
+        </SlideAnimation>
       </TextAnimationItem>
       <TextAnimationItem>
         <TypingAnimation>
