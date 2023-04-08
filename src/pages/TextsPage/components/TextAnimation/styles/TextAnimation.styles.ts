@@ -291,3 +291,28 @@ export const DashedLineThroughAnimation = styled(Animation)`
     transform: scaleX(1);
   }
 `;
+
+const rotateAnimation = keyframes`
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(360deg) scale(0.5);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+`;
+
+export const RotateAnimation = styled(Animation)`
+  width: 100%;
+  height: 100%;
+
+  &:hover ${TextWrapper} {
+    animation-name: ${rotateAnimation};
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    /* animation: ${rotateAnimation} 2s ease-in-out infinite; */
+  }
+`;

@@ -5,6 +5,7 @@ import {
   FadeAnimation,
   FlashColorsAnimation,
   LineThroughAnimation,
+  RotateAnimation,
   SlideAnimation,
   TextAnimationItem,
   TextShadowAnimation,
@@ -44,6 +45,11 @@ export default function TextAnimationList({ text }: TextAnimationListProps) {
       </TextAnimationItem>
       <TextAnimationItem>
         <DashedLineThroughAnimation>{text}</DashedLineThroughAnimation>
+      </TextAnimationItem>
+      <TextAnimationItem>
+        <RotateAnimation>
+          <TextWrapper>{text}</TextWrapper>
+        </RotateAnimation>
       </TextAnimationItem>
     </AnimationList>
   );
